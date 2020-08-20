@@ -1,0 +1,122 @@
+/*Tête de la page d'accueil'*/
+#villagesBlazon{
+    width: 60px;
+}
+#homeHead{
+    height: 200px;
+    background: url("/assets/images/vue-aerienne-3.jpg") center;
+    background-size: cover;
+}
+#titleSite{
+    font-size: 2.5em;
+    font-family: 'Playball', cursive;
+    color: #f0f1f2;
+}
+/*Barre de navigation*/
+#homeButton{
+    width: 25px;
+}
+nav{
+    background: linear-gradient(#66c75a, #45853d);
+}
+/*Page d'accueil'*/
+.homeTitles{
+    font-size: 1.5em;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-family: 'Playball', cursive;
+}
+.publicationTitle{
+    font-size: 1.2em;
+}
+#lastPublications{
+    margin-top: 30px;
+}
+#homeCarousel{
+    box-shadow: 2px 2px 10px;
+    margin-top: 40px;
+    margin-left: 0;
+}
+/*Footer*/
+footer{
+    margin-top: 50px;
+    background-color: #383838;
+    box-shadow: 0 0 7px;
+}
+.footerLinks{
+    color: white;
+    margin: 40px;
+}
+.footerLinks:hover{
+    color: white;
+    font-weight: bold;
+}
+/*Formulaire d'inscription*/
+#registrationTitle{
+    text-decoration: underline;
+    font-family: 'Playball', cursive;
+}
+#userRegistration{
+    background: linear-gradient(#66c75a, #45853d);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#userRegistration:hover{
+    opacity: 0.8;
+}
+#userRegistration:active{
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+#registrationForm{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin: 5px;
+    border: gray 1px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+/*Page de profil*/
+#userProfilContent{
+    min-height: 60vh;
+}
+#profilTitle{
+    text-decoration: underline;
+    font-family: 'Playball', cursive;
+    margin-top: 50px;
+}
+#userInfos{
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+}
+.userPersonalInfos{
+    font-weight: bold;
+}
+.updateUserForm{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin: 5px;
+    border: gray 1px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.updateBtn{
+    background: linear-gradient(#66c75a, #45853d);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.updateBtn:hover{
+    opacity: 0.8;
+}
+.updateBtn:active{
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+#deleteButtonContainer{
+    margin-top: 100px;
+}
+#deleteUserFormContainer{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin: 5px;
+    border: red 1px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
