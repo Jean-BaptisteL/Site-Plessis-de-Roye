@@ -1,16 +1,25 @@
 <?php
 include_once 'models/users.php';
+include_once 'models/infoconnection.php';
 include_once 'controllers/headerCtrl.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8" />
+        <title><?= $pagetitle ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="assets/images/800px-Blason_PLESSIS_DE_ROYE.svg.ico" />
+        <?php
+        if ($pagetitle == 'Plessis de Roye - Accueil'){
+        ?>
+        <meta name="description" content="Site officiel de la commune de Plessis-de-Roye dont font partie les villages de Plessis-de-Roye et de Belval.">
+        <?php
+        }
+        ?>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet"> 
-        <title><?= $pagetitle ?></title>
     </head>
     <body class="container-fluid p-0">
         <header>
@@ -25,81 +34,66 @@ include_once 'controllers/headerCtrl.php';
                 </div>
             </div>
             <!--Barre de navigation-->
-            <nav class="navbar navbar-light navbar-expand-lg shadow-sm">
+            <nav class="navbar navbar-expand-lg shadow-sm">
                 <a class="navbar-brand" href="index.php" title="Plessis de Roye"><img id="homeButton" src="assets/images/800px-Blason_PLESSIS_DE_ROYE.svg.png" alt="Accueil" /> Accueil</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTownHall" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mairie</a>
+                            <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownTownHall" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mairie</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownTownHall">
-                                <a class="dropdown-item" href="#">Histoire de la commune</a>
-                                <a class="dropdown-item" href="#">Composition du conseil</a>
-                                <a class="dropdown-item" href="#">Horaires et permanences</a>
-                                <a class="dropdown-item" href="#">Conseils municipaux</a>
-                                <a class="dropdown-item" href="#">Bulletin communal</a>
-                                <a class="dropdown-item" href="#">Démarches administratives</a>
-                                <a class="dropdown-item" href="#">Nous contacter</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Histoire de la commune</a>
+                                <a class="dropdown-item" href="municipalCouncilComposition.php">Composition du conseil</a>
+                                <a class="dropdown-item" href="timetable.php">Horaires et permanences</a>
+                                <a class="dropdown-item" href="articles.php?type=CM">Conseils municipaux</a>
+                                <a class="dropdown-item" href="articles.php?type=BC">Bulletins communaux</a>
+                                <a class="dropdown-item" href="articles.php?type=DA">Démarches administratives</a>
+                                <a class="dropdown-item" href="contact.php">Nous contacter</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evolution du village</a>
+                            <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evolution du village</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
-                                <a class="dropdown-item" href="#">Plan d'urbanisme</a>
-                                <a class="dropdown-item" href="#">Permis de construire</a>
-                                <a class="dropdown-item" href="#">Travaux</a>
-                                <a class="dropdown-item" href="#">Informations communales</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Plan d'urbanisme</a>
+                                <a class="dropdown-item" href="buildingPermit.php">Permis de construire</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Travaux</a>
+                                <a class="dropdown-item" href="articles.php?type=IC">Informations communales</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLeisure" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Associations et Loisirs</a>
+                            <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownLeisure" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Associations et Loisirs</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
-                                <a class="dropdown-item" href="#">Sport et loisirs</a>
-                                <a class="dropdown-item" href="#">Associations</a>
-                                <a class="dropdown-item" href="#">Vie culturelle</a>
-                                <a class="dropdown-item" href="#">Vie solidaire</a>
+                                <a class="dropdown-item" href="salleDesFetes.php">Salle des fêtes</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Sport et loisirs</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Associations</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Vie culturelle</a>
+                                <a class="dropdown-item" href="websiteUnderConstruction.php">Vie solidaire</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Actualités</a>
+                            <a class="nav-link navbarLink" href="articles.php?type=AC">Actualités</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Agenda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Forum des habitants</a>
+                            <a class="nav-link navbarLink" href="agenda.php">Agenda</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <form class="form-inline" action="#">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Rechercher" name="search"  method="POST" aria-label="Rechercher" aria-describedby="searchBtn">
-                                <div class="input-group-append" >
-                                    <button id="searchBtn" class="btn btn-outline-dark" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                         <?php
-                        if(!isset($_SESSION['user'])){
+                        if(!isset($_SESSION['user']) || $_SESSION['user']['userFirstname'] != 'MairieDePlessisEtBelval'){
                         ?>
-                        <li class="nav-intem">                            
-                            <a class="nav-link text-nowrap" href="registration.php" title="Inscription"><i class="fas fa-user-plus"></i> Inscription</a>
-                        </li>
                         <li class="nav-intem"> 
-                            <a class="nav-link text-nowrap" href="#" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                            <a class="nav-link text-nowrap navbarLink" href="#" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Connexion</a>
                         </li>
                         <?php
                         }else{
                         ?>
-                        <li class="nav-intem">                            
-                            <a class="nav-link text-nowrap" href="userProfil.php" title="Profil"><i class="fas fa-user"></i> Mon profil</a>
+                        <li class="nav-item">
+                            <a class="nav-link navbarLink" href="contentForm.php" title="Gestion du site"><i class="fas fa-tools"></i> Gestion du site</a>
                         </li>
                         <li class="nav-intem"> 
-                            <a class="nav-link text-nowrap" href="?signOut=true" title="Déconnexion"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                            <a class="nav-link text-nowrap navbarLink" href="?signOut=true" title="Déconnexion"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
                         </li>
                         <?php
                         }
@@ -119,7 +113,7 @@ include_once 'controllers/headerCtrl.php';
                             <div class="modal-body">
                                 <p class="text-danger"><?= isset($errorMessagesForLogin['errorLogin']) ? $errorMessagesForLogin['errorLogin'] : '' ?></p>
                                 <div class="row ml-2">
-                                    <label for="userName">Adresse mail :</label><input type="text" class="col-11 form-control <?= (isset($_POST['userEmail']) ? (isset($errorMessagesForLogin['userEmail']) || isset($errorMessagesForLogin['errorLogin']) ? 'is-invalid' : 'is-valid') : '') ?>" name="userEmail" id="userEmail" required />
+                                    <label for="userName">Identifiant :</label><input type="text" class="col-11 form-control <?= (isset($_POST['userEmail']) ? (isset($errorMessagesForLogin['userEmail']) || isset($errorMessagesForLogin['errorLogin']) ? 'is-invalid' : 'is-valid') : '') ?>" name="userEmail" id="userEmail" required />
                                     <p class="col-10 text-danger"><?= isset($errorMessagesForLogin['userEmail']) ? $errorMessagesForLogin['userEmail'] : '' ?></p>
                                 </div>
                                 <div class="row ml-2">

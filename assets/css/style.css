@@ -8,9 +8,14 @@
     background-size: cover;
 }
 #titleSite{
-    font-size: 2.5em;
+    font-size: 4em;
     font-family: 'Playball', cursive;
     color: #f0f1f2;
+}
+@media screen and (max-width: 738px){
+    #titleSite{
+        font-size: 2em;
+    }
 }
 /*Barre de navigation*/
 #homeButton{
@@ -18,6 +23,25 @@
 }
 nav{
     background: linear-gradient(#66c75a, #45853d);
+}
+.navbarLink{
+    color: #f0f1f2;
+    background-image: linear-gradient(#f0f1f2, #f0f1f2), linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    background-size: 0 1px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all 0.3s ease-out;
+    font-size: 1.1em;
+}
+.navbar-brand{
+    color: #f0f1f2;
+}
+.navbar-brand:hover{
+    color: #f0f1f2;
+}
+.navbarLink:hover{
+    color: #f0f1f2;
+    background-size: 100% 1px, auto;
 }
 /*Page d'accueil'*/
 .homeTitles{
@@ -37,6 +61,23 @@ nav{
     margin-top: 40px;
     margin-left: 0;
 }
+#applicationLink{
+    margin-top: 40px;
+    font-weight: bold;
+}
+.meteoWidget{
+    margin-top: 40px;
+}
+@media screen and (max-width: 360px){
+    .meteoWidget{
+        width: 150px;
+        height: 300px;
+    }
+    #widgetMeteo{
+        display: flex;
+        justify-content: center
+    }
+}
 /*Footer*/
 footer{
     margin-top: 50px;
@@ -51,72 +92,108 @@ footer{
     color: white;
     font-weight: bold;
 }
-/*Formulaire d'inscription*/
-#registrationTitle{
-    text-decoration: underline;
-    font-family: 'Playball', cursive;
-}
-#userRegistration{
+
+/*Formulaire d'ajout de fichiers*/
+#saveFile, .updateArticleBtn, #addCounsilMember, .updateMemberBtn, #addDate, .updateEventBtn, .updateBookingBtn, #addBooking{
     background: linear-gradient(#66c75a, #45853d);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: #f0f1f2; 
 }
-#userRegistration:hover{
+#saveFile:hover, .updateArticleBtn:hover, .deleteArticleBtn:hover, #addCounsilMember:hover, .updateMemberBtn:hover, .deleteMemberBtn:hover, #addDate:hover, .updateEventBtn:hover, .deleteEventBtn:hover, .updateBookingBtn:hover, .deleteBookingBtn:hover, #addBooking:hover{
     opacity: 0.8;
+    color: #f0f1f2;
 }
-#userRegistration:active{
+#saveFile:active, .updateArticleBtn:active, .deleteArticleBtn:active, #addCounsilMember:active, .updateMemberBtn:active, .deleteMemberBtn:active, #addDate:active, .updateEventBtn:active, .deleteEventBtn:active, .updateBookingBtn:active, .deleteBookingBtn:active, #addBooking:active{
     box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
-#registrationForm{
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin: 5px;
-    border: gray 1px solid;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-/*Page de profil*/
-#userProfilContent{
-    min-height: 60vh;
-}
-#profilTitle{
+.saveFileTitle{
     text-decoration: underline;
     font-family: 'Playball', cursive;
     margin-top: 50px;
 }
-#userInfos{
-    border-radius: 20px 0px 20px 0px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-
+.contentFormBody, #constructionPage{
+    min-height: 62vh;
 }
-.userPersonalInfos{
+.deleteArticleBtn, .deleteMemberBtn, .deleteEventBtn, .deleteBookingBtn{
+    background: linear-gradient(180deg, rgba(246,0,0,1) 0%, rgba(134,16,6,1) 100%);
+    color: #f0f1f2;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+/*Page des articles*/
+#articlesPage{
+    min-height: 60vh;
+}
+#articlesPageTitle, .pageTitle{
+    text-decoration: underline;
+    font-family: 'Playball', cursive;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.list-group-item{
+    box-shadow: 2px 2px 10px;
+}
+/*Gestion du conseil municipal*/
+.councilPhotos{
+  display: block;
+  max-height:180px;
+  width: auto;
+  height: auto;
+}
+.councilBox{
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 15px;
+    width: 400px;
+}
+
+/*Agenda*/
+.eventList{
+    padding: 10px;
+    list-style: none;
+}
+.eventList li h3{
+    font-size: 1.5em;
+    color: black;
+}
+.eventList li h3 i{
+    font-size: 1em;
+}
+
+/*calendrier*/
+.booked{
+    background-color: #f89090;
+    color: white;
+}
+.bookedCaption{
+    width: 50px;
+    height: 25px;
+}
+.descriptionSalle{
     font-weight: bold;
 }
-.updateUserForm{
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin: 5px;
-    border: gray 1px solid;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+#photoSalle, #photoMairie{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
-.updateBtn{
-    background: linear-gradient(#66c75a, #45853d);
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+/*Général*/
+p{
+    font-size: 1.2em;
 }
-.updateBtn:hover{
-    opacity: 0.8;
+
+/*Mentions légales*/
+.titlesLegalNotice{
+    font-size: 1.3em;
+    text-decoration: underline;
+    margin-top: 30px;
 }
-.updateBtn:active{
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+
+/*Plan du site*/
+.sitemapLink{
+    color: black;
 }
-#deleteButtonContainer{
-    margin-top: 100px;
-}
-#deleteUserFormContainer{
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin: 5px;
-    border: red 1px solid;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+/*Permis de construire*/
+.liDlFile{
+    list-style-image: url("../images/dlFile.png");
 }
