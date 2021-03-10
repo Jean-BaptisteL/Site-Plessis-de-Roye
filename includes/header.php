@@ -13,7 +13,7 @@ include_once 'controllers/headerCtrl.php';
         <?php
         if ($pagetitle == 'Plessis de Roye - Accueil'){
         ?>
-        <meta name="description" content="Site officiel de la commune de Plessis-de-Roye dont font partie les villages de Plessis-de-Roye et de Belval.">
+        <meta name="description" content="Site officiel de la commune de Plessis-de-Roye dont font partie le bourg de Plessis-de-Roye et le hameau de Belval.">
         <?php
         }
         ?>
@@ -56,7 +56,7 @@ include_once 'controllers/headerCtrl.php';
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evolution du village</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Plan d'urbanisme</a>
+                                <a class="dropdown-item" href="plu.php">Plan local d'urbanisme</a>
                                 <a class="dropdown-item" href="buildingPermit.php">Permis de construire</a>
                                 <a class="dropdown-item" href="websiteUnderConstruction.php">Travaux</a>
                                 <a class="dropdown-item" href="articles.php?type=IC">Informations communales</a>

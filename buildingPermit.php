@@ -55,7 +55,7 @@ include_once 'includes/header.php';
             <article class="mt-5">
                 <h3>Cadastre, PLU</h3>
                 <p>Le cadastre est visible sur les sites <a href="https://www.geoportail-urbanisme.gouv.fr/map/#tile=5&lon=2.832799&lat=49.57783100000003&zoom=13&mlon=2.832799&mlat=49.577831" title="Géoportail" target="_blank">Géoportail</a> ou <a href="https://www.cadastre.gouv.fr/scpc/accueil.do" target="_blank" title="Cadastre">Cadastre.gouv</a>.</p>
-                <p>Quant au PLU (Plan Local d’Urbanisme), il est actuellement visible en mairie. Certaines informations seront progressivement mises en ligne sur <a href="www.plessisderoye.fr" target="_blank" title="Plan d'urbanisme">le site communal  de Plessis de Roye</a>.</p>
+                <p>Quant au PLU (Plan Local d’Urbanisme), il est actuellement visible en mairie. Certaines informations seront progressivement mises en ligne sur <a href="#" target="_blank" title="Plan d'urbanisme (en cours de développement)">le site communal  de Plessis de Roye</a>.</p>
                 <figure>
                     <img src="assets/images/planVillage.png" alt="Plan du village" class="img-fluid mx-auto d-block" />
                     <figcaption class="text-center font-italic">Délimitation du village de Plessis de Roye : pour l’étude du cadastre, voir les sites référencés ci-dessus.<br/>

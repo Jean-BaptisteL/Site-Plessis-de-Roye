@@ -197,3 +197,13 @@ p{
 .liDlFile{
     list-style-image: url("../images/dlFile.png");
 }
+
+/*PLU*/
+#pluNord{
+    margin-left: 2px !important;
+}
+@media screen and (max-width: 360px){
+    #pluNord{
+    margin-left: 1px !important;
+}
+}
