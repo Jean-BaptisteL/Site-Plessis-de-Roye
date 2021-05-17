@@ -20,8 +20,8 @@ include_once 'includes/header.php';
             </ul>
             <h3 class="titlesLegalNotice">Evolution du village</h3>
             <ul>
-                <li><a class="sitemapLink" href="websiteUnderConstruction.php">Plan d'urbanisme</a></li>
-                <li><a class="sitemapLink" href="websiteUnderConstruction.php">Permis de construire</a></li>
+                <li><a class="sitemapLink" href="plu.php">Plan local d'urbanisme</a></li>
+                <li><a class="sitemapLink" href="buildingPermit.php">Permis de construire</a></li>
                 <li><a class="sitemapLink" href="websiteUnderConstruction.php">Travaux</a></li>
                 <li><a class="sitemapLink" href="articles.php?type=IC">Informations communales</a></li>
             </ul>

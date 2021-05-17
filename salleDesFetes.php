@@ -7,7 +7,7 @@ include_once 'includes/header.php';
 ?>
 <div class="contentFormBody">
     <h2 class="pageTitle text-center">La salle des fêtes du village</h2>
-    <p class="text-center text-danger mb-5">A cause de la COVID-19, la salle est inaccessible au public au moins jusqu'au 31 décembre 2020.</p>
+    <p class="text-center text-danger mb-5">A cause de la COVID-19, la salle est inaccessible au public jusqu’à une date indéterminée.</p>
     <div class="row m-0 d-flex justify-content-around">
         <div class="col-sm-12 col-md-5">
             <img id="photoSalle" class="mb-4 img-fluid rounded" src="assets/images/salleCommunale.JPG" alt="Salle des fêtes" />

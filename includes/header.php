@@ -35,7 +35,7 @@ include_once 'controllers/headerCtrl.php';
             </div>
             <!--Barre de navigation-->
             <nav class="navbar navbar-expand-lg shadow-sm">
-                <a class="navbar-brand" href="index.php" title="Plessis de Roye"><img id="homeButton" src="assets/images/800px-Blason_PLESSIS_DE_ROYE.svg.png" alt="Accueil" /> Accueil</a>
+                <a class="navbar-brand" href="accueil" title="Plessis de Roye"><img id="homeButton" src="assets/images/800px-Blason_PLESSIS_DE_ROYE.svg.png" alt="Accueil" /> Accueil</a>
                 <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,39 +44,39 @@ include_once 'controllers/headerCtrl.php';
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownTownHall" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mairie</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownTownHall">
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Histoire de la commune</a>
-                                <a class="dropdown-item" href="municipalCouncilComposition.php">Composition du conseil</a>
-                                <a class="dropdown-item" href="timetable.php">Horaires et permanences</a>
-                                <a class="dropdown-item" href="articles.php?type=CM">Conseils municipaux</a>
-                                <a class="dropdown-item" href="articles.php?type=BC">Bulletins communaux</a>
-                                <a class="dropdown-item" href="articles.php?type=DA">Démarches administratives</a>
-                                <a class="dropdown-item" href="contact.php">Nous contacter</a>
+                                <a class="dropdown-item" href="en-construction">Histoire de la commune</a>
+                                <a class="dropdown-item" href="conseil-municipal">Composition du conseil</a>
+                                <a class="dropdown-item" href="horaires-et-permanences">Horaires et permanences</a>
+                                <a class="dropdown-item" href="conseils-municipaux">Conseils municipaux</a>
+                                <a class="dropdown-item" href="bulletins-communaux">Bulletins communaux</a>
+                                <a class="dropdown-item" href="demarches-administratives">Démarches administratives</a>
+                                <a class="dropdown-item" href="contact">Nous contacter</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Evolution du village</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
-                                <a class="dropdown-item" href="plu.php">Plan local d'urbanisme</a>
-                                <a class="dropdown-item" href="buildingPermit.php">Permis de construire</a>
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Travaux</a>
-                                <a class="dropdown-item" href="articles.php?type=IC">Informations communales</a>
+                                <a class="dropdown-item" href="plan-local-urbanisme">Plan local d'urbanisme</a>
+                                <a class="dropdown-item" href="permis-de-contruire">Permis de construire</a>
+                                <a class="dropdown-item" href="en-construction">Travaux</a>
+                                <a class="dropdown-item" href="informations-communales">Informations communales</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle navbarLink" href="#" id="navbarDropdownLeisure" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Associations et Loisirs</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
-                                <a class="dropdown-item" href="salleDesFetes.php">Salle des fêtes</a>
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Sport et loisirs</a>
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Associations</a>
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Vie culturelle</a>
-                                <a class="dropdown-item" href="websiteUnderConstruction.php">Vie solidaire</a>
+                                <a class="dropdown-item" href="salle-des-fetes">Salle des fêtes</a>
+                                <a class="dropdown-item" href="en-construction">Sport et loisirs</a>
+                                <a class="dropdown-item" href="en-construction">Associations</a>
+                                <a class="dropdown-item" href="en-construction">Vie culturelle</a>
+                                <a class="dropdown-item" href="en-construction">Vie solidaire</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navbarLink" href="articles.php?type=AC">Actualités</a>
+                            <a class="nav-link navbarLink" href="actualites">Actualités</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navbarLink" href="agenda.php">Agenda</a>
+                            <a class="nav-link navbarLink" href="agenda">Agenda</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -90,7 +90,7 @@ include_once 'controllers/headerCtrl.php';
                         }else{
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link navbarLink" href="contentForm.php" title="Gestion du site"><i class="fas fa-tools"></i> Gestion du site</a>
+                            <a class="nav-link navbarLink" href="gestion-du-site" title="Gestion du site"><i class="fas fa-tools"></i> Gestion du site</a>
                         </li>
                         <li class="nav-intem"> 
                             <a class="nav-link text-nowrap navbarLink" href="?signOut=true" title="Déconnexion"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
